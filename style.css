@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+}
+
+.navbar-keeper{
+    background-color: rgb(39, 39, 134);
+    text-align: -webkit-center;
+}
+
+.navbar{
+    max-width: 1200px;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 20px ;
+}
+
+.lines{
+    display: none;
+}
+
+.line{
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 2px;
+}
+.menu ul{
+    display: flex;
+}
+.menu li{
+    margin: 10px;
+    list-style-type: none;
+    color: white;
+}
+.menu li:hover{
+    color: aquamarine;
+    cursor: pointer;
+}
+.container-keeper{
+    text-align: -webkit-center;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width:1200px ;
+    justify-content: center;
+}
+.container img{
+    border-radius: 20px;
+
+}
+.sag {
+    text-align: left;
+    width: 500px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.sag p,.sol p,.card p{
+    font-size: larger;
+    color: rgb(148, 140, 140);
+    margin-top: 20px;
+}
+.sol{
+    text-align: right;
+    width: 500px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+.icon-keeper{
+    text-align: -webkit-center;
+
+}
+
+.icon{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.icon img{
+    width: 130px;
+    height: 130px;
+}
+.card{
+    width: 300px;
+    margin: 10px;
+}
+.footer-keeper{
+    background-color: rgb(39, 39, 134);
+    text-align: -webkit-center;
+}
+
+.footer{
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.info li{
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 3px;
+}
+.follow h2 , i{
+    color: white;
+}
+.info h3{
+    color: white;
+    
+}
+.privacy h4{
+    color: grey;
+}
+.privacy h4:hover{
+    color: white;
+}
+@media(max-width:768px){
+    .navbar{
+        justify-content: space-around;
+    }
+    .container{
+        align-items: center;
+    }
+    .container img{
+        width: 80%;
+    }
+    #reverse{
+        flex-direction: column-reverse;
+    }
+    .menu{
+        display: none;
+
+    }
+
+    .lines{
+        display: flex;
+        flex-direction: column;
+    }
+}
