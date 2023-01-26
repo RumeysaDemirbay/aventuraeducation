@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generator</title>
+    <style>
+        .color-box {
+          width: 150px;
+          height: 105px;
+          margin: 20px;
+          display: inline-block;
+        }
+    </style>
+    </head>
+    <body>
+    <div id="colors"></div>
+    <script>
+        function generateRandomColor() {
+            let red = Math.floor(Math.random() * 256);  //rgb kırmızı renk kodu için rastgele sayı üretir
+            let green = Math.floor(Math.random() * 256); //rgb yeşil renk kodu için rastgele sayı üretir
+            let blue = Math.floor(Math.random() * 256);  //rgb mavi renk kodu için rastgele sayı üretir
+            return "rgb(" + red + ", " + green + ", " + blue + ")";   
+        }
+
+        function generateColors(numColors) {           
+            let colors = [];
+            for (let i = 0; i < numColors; i++) {      
+                colors.push(generateRandomColor()); // her döngüde, "generateRandomColor" adlı başka bir fonksiyonu çağırır ve geri dönen değeri "colors" dizisine ekler. 
+            }
+            return colors;
+        }
+
+        let numColors = prompt("Üretmek istediğiniz renk kodu sayisini giriniz");
+        let colors = generateColors(numColors); 
+        let colorDiv = document.getElementById("colors"); //colors adlı html elemanını(belirli bir id niteliği arar getelementbyıd ile) colorDiv değişkenine atar.
+        for (let i = 0; i < colors.length; i++) {
+            let colorBox = document.createElement("div"); //html div elementi oluşturur ve colorbox değişkenine atar.
+            colorBox.classList.add("color-box"); 
+            colorBox.style.backgroundColor = colors[i]; //colorBox" değişkeninin arka plan rengini colors[i] dizisindeki değere eşitlediğini ifade eder.
+            colorDiv.appendChild(colorBox); //colorBox" elementi colorDiv elementinin içine eklenir. 
+        }
+        console.log (color);
+    </script>
+  </body>
+</html>
