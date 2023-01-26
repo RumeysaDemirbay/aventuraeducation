@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <h5> SAYAÇ </h5>
+       <meta charset="utf-8">
+       <style>
+        input[type="button"]{
+            width: 200px;
+            height:200px;
+            border:none;
+            font-size:3em;
+            background: #78909C;
+            color: 	#004D40;
+            border-radius: 25px;
+            padding: 20px; 
+        } 
+        h5{
+            font-size: 2em;
+            color:	#ad7f6f;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        </style>
+            <title>SAYAÇ</title>
+        
+    </head>
+   <body>
+    <input type=button onclick="arttir()" value="+">
+    <input type=button onclick="azalt()" value="-">
+    <input type=button id= "sonuc" value="0">
+
+    <script>
+        function arttir(){
+            var sonuc=document.getElementById("sonuc");
+            sonuc.value=Number(sonuc.value)+1;
+        }
+
+        function azalt(){
+            var sonuc=document.getElementById("sonuc");
+            sonuc.value=Number(sonuc.value)-1;
+        } 
+   </script>
+    </html>
+    </body>
